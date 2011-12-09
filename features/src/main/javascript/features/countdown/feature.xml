@@ -1,0 +1,22 @@
+<!--
+	カウントダウン Feature に "countdown" という名称をつけ、
+	これが依存する他の Feature を宣言する。
+	
+	そして、この Feature を実現するための JavaScript コードが Gadget および Container から使用されることを
+	宣言する。
+-->
+<feature>
+	<name>countdown</name>
+	
+	<!-- globals ではグローバル変数が定義されている。カウントダウンでも gadgets を使用しているので、これが必要だ。 -->
+	<dependency>globals</dependency>
+	
+	<gadget>
+		<script src="countdown_base.js"/>
+		<script src="taming.js"/>
+	</gadget>
+	<container>
+		<script src="countdown_base.js"/>
+		<script src="taming.js"/>
+	</container>
+</feature>
