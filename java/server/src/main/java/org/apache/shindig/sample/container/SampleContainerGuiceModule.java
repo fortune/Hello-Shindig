@@ -27,5 +27,7 @@ public class SampleContainerGuiceModule extends AbstractModule {
 
     Multibinder<Object> handlerBinder = Multibinder.newSetBinder(binder(), Object.class, Names.named("org.apache.shindig.handlers"));
     handlerBinder.addBinding().toInstance(SampleContainerHandler.class);
+    
+    handlerBinder.addBinding().toInstance(NgWordHandler.class);
   }
 }
