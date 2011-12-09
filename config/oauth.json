@@ -31,6 +31,28 @@
       "consumer_secret" : "secret",
       "key_type" : "HMAC_SYMMETRIC"
     }
+  },
+  //
+  // Gadget XML アプリ data_request.xml から signed リクエストを出せるようにするため、
+  // この Gadget XML アプリの URL に対し、コンシューマキーとシークレットを指定する。
+  //
+  // この Gadget XML アプリがプロキシ経由のコンテンツだった場合も、こうすることで、
+  // href 属性で指定した外部サーバへのリクエストが 2-legged oauth の認証リクエストにできる。
+  // （authz="signed" が指定されていたとき）
+  //
+  "http://kazu.fortunefield.com/opensocial/examples/data_request.xml" : {
+    "" : {
+      "consumer_key" : "fortunefield",
+      "consumer_secret" : "I am not what I am",
+      "key_type" : "HMAC_SYMMETRIC"
+    }
+  },
+  "http://kazu.fortunefield.com/opensocial/examples/hello_url.xml" : {
+    "" : {
+      "consumer_key" : "fortunefield",
+      "consumer_secret" : "I am not what I am",
+      "key_type" : "HMAC_SYMMETRIC"
+    }
   }
 }
   
