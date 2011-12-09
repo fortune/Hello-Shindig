@@ -1008,7 +1008,10 @@
             <source>1.5</source>
             <target>1.5</target>
             <showDeprecation>true</showDeprecation>
+            <!--
+                コンパイルエラーを避けるため、コメントアウトする。
             <compilerArgument>-Xlint:unchecked,deprecation,fallthrough,finally</compilerArgument>
+            -->
             <fork>true</fork>
             <encoding>${project.build.sourceEncoding}</encoding>
           </configuration>
